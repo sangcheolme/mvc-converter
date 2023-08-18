@@ -27,8 +27,7 @@ public class ConverterTest {
         StringToIpPortConverter converter = new StringToIpPortConverter();
         String source = "127.0.0.1:8080";
         IpPort result = converter.convert(source);
-        assertThat(result.getIp()).isEqualTo("127.0.0.1");
-        assertThat(result.getPort()).isEqualTo(8080);
+        assertThat(result).isEqualTo(new IpPort("127.0.0.1", 8080));
     }
 
     @Test
